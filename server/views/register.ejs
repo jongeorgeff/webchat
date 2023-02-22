@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Register</title>
+</head>
+<body>
+
+<form id="registrationForm" method="post" action="/user/register">
+<p><label>Username <input name="username" type="text" value=""></label></p>
+<p><label>Email <input name="email" type="email" value=""></label></p>
+<p><label>Password <input name="password" type="password" value=""></label></p>
+<p><button type="submit">Register</button></p>
+</form>
+<script>
+
+function register(email, username, password) {
+	fetch('/user/register', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: new URLSearchParams({ email, username, password })
+	}).then((resp)=>resp.json()).then((data)=>{
+		if (data.error) {
+			alert(data.error);
+		} else {
+			alert('Registration complete!');
+		}
+	});
+}
+
+document.getElementById('registrationForm').addEventListener('submit', function (e) {
+	e.preventDefault();
+	let { email, username, password } = this.elements;
+	register(email.value, username.value, password.value);
+});
+</script>
+</body>
+</html>

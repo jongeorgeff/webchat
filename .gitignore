@@ -1,0 +1,9 @@
+.env
+.env.test
+*-debug.log
+*-error.log
+package-lock.json
+node_modules
+client/public/bundle.js
+client/public/bundle.js.LICENSE.txt
+client/public/bundle.js.map

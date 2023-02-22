@@ -1,0 +1,54 @@
+.chat-log {
+	box-sizing: border-box;
+	grid-column: 1 / 2;
+	grid-row: 2;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: auto;
+}
+
+.chat-message {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em;
+	line-height: 1.5;
+}
+
+.chat-message-user {
+	color: #0ff;
+	font-weight: bold;
+}
+
+.chat-message-time {
+	font-size: 0.85em;
+}
+
+.chat-message-content,
+.chat-message-content p,
+.chat-message-content pre {
+	box-sizing: border-box;
+	margin: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding: 0;
+}
+
+.chat-message-content pre,
+.chat-message-content code {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.chat-message-content h1:not(:last-child),
+.chat-message-content h2:not(:last-child),
+.chat-message-content p:not(:last-child),
+.chat-message-content pre:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+.chat-action .chat-message-content {
+	font-style: italic;
+}

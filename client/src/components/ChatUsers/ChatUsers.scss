@@ -1,0 +1,29 @@
+.chat-users {
+	box-sizing: border-box;
+	border-left: solid 1px #666;
+	grid-column: 2 / 3;
+	grid-row: 2 / 4;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.chat-users-header {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.chat-list {
+	box-sizing: border-box;
+	list-style: none;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.chat-current-user {
+	color: #0ff;
+	font-weight: bold;
+}
